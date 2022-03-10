@@ -1,0 +1,46 @@
+.select {
+  display: inline-block;
+
+  &__value {
+    position: relative;
+    padding-right: 15px;
+    cursor: pointer;
+
+    &::after {
+      right: 5px;
+      top: 5px;
+      content: '';
+      position: absolute;
+      border-top: 5px solid transparent;
+      border-left: 5px solid black;
+      border-bottom: 5px solid transparent;
+      transition: 0.5s;
+    }
+  }
+
+  &__options {
+    background-color: white;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  &__option {
+    cursor: pointer;
+  }
+
+  &_opened {
+    .select {
+      &__value {
+        &::after {
+          transform: rotateZ(90deg);
+        }
+      }
+
+      &__options {
+        height: auto;
+      }
+    }
+  }
+}

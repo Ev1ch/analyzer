@@ -1,0 +1,29 @@
+@import 'scss-variables';
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    & {
+      width: 760px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    & {
+      width: 580px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    & {
+      width: 90%;
+    }
+  }
+}

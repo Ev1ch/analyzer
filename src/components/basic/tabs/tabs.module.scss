@@ -1,0 +1,35 @@
+.tabs {
+  &__navigation {
+    display: flex;
+  }
+
+  &__button {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #ccc;
+    transition: var(--base-time);
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+
+    &:not(:first-child) {
+      margin-left: -10px;
+    }
+
+    &_active {
+      z-index: 2;
+      background-color: #fff;
+    }
+  }
+}
+
+.tab {
+  padding: 10px;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid black;
+}
